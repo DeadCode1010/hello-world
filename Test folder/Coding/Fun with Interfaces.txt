@@ -1,0 +1,73 @@
+//Rextester.Program.Main is the entry point for your code. Don't change it.
+//Compiler version 4.0.30319.17929 for Microsoft (R) .NET Framework 4.5
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text.RegularExpressions;
+
+namespace Rextester
+{
+    public class Program
+    {
+        public static void Main(string[] args)
+        {
+            //Your code goes here
+            Console.WriteLine("Hello, world!");
+            
+           someClass myClass = new someClass(); 
+            
+            MathGuy math = new MathGuy(); 
+            
+            Console.WriteLine("The sum of " + myClass.myData.x + " and " + myClass.myData.y + " is " + math.Sum(myClass)); 
+            
+            
+        }
+    }
+    
+    
+    
+    public class DataStruct
+    {
+        public int x; 
+        public int y; 
+        
+        public DataStruct()
+        {
+            Random r = new Random(); 
+            
+            x = r.Next(0, 51); 
+            y = r.Next(0, 51); 
+        }
+            
+    }
+    
+    public class MathGuy
+    {
+        public int Sum(Addition a) 
+        {
+            DataStruct data; 
+            
+            data = a.GetNum(); 
+            
+            return data.x + data.y; 
+        }
+    }
+    
+    public class someClass : Addition
+    {
+        public DataStruct myData = new DataStruct(); 
+        
+        public DataStruct GetNum()
+        {
+            return myData; 
+        }
+        
+        
+    }
+    
+    public interface Addition
+    {
+        DataStruct GetNum(); 
+    }
+}
