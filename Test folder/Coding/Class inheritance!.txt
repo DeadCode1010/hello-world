@@ -1,0 +1,66 @@
+//Rextester.Program.Main is the entry point for your code. Don't change it.
+//Compiler version 4.0.30319.17929 for Microsoft (R) .NET Framework 4.5
+
+using System;
+using System.Collections.Generic;
+//using System.Collections;
+using System.Linq;
+using System.Text.RegularExpressions;
+
+namespace Rextester
+{
+    public class Program
+    {
+        public List<int> myInts = new List<int>(); 
+        
+        public static void Main(string[] args)
+        {
+            
+            //Your code goes here
+            Console.WriteLine("Hello, world!");
+        }
+
+        
+    }
+    
+    public class Food 
+    {
+        int healthPoints; 
+        
+        public int HealthPoints
+        {
+            get {return healthPoints} 
+        }
+        
+        
+        public Food(int hp)
+        {
+            healthPoints = hp; 
+        }
+        
+    }
+    
+    
+    public class Meat : Food 
+    {
+        
+    }
+    
+    public class Plant : Food 
+    {
+        
+    }
+    
+    public class mammel 
+    {
+        bool isAlive; 
+        string species; 
+        int health; 
+        int age; 
+        
+        public void Eat(Food food) 
+        {
+            
+        }
+    }
+}
